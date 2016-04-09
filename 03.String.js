@@ -17,7 +17,7 @@ var slice = function(stringOrArray, start, end) {
 // `String.prototype.split` can return an array based on a string by 
 // breaking it up using a delimiter string. The delimiter is not 
 // included in the final array.
-var split = function(string) {
+var split = function(string, delim) {
 
 };
 

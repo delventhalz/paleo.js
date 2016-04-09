@@ -1,12 +1,16 @@
 var expect = chai.expect;
 
 var dontCheatOn = function(func) {
-  var forbidden = [
-    'Math', 
-    'Array', 
-    'Object', 
-    'Date', 
-    'Number',
+  var globals = [
+    'Math',
+    'Array',
+    'String',
+    'Object',
+    'Date',
+    'Number'
+  ];
+
+  var methods = [
     '.pop',
     '.push',
     '.shift',
@@ -21,7 +25,15 @@ var dontCheatOn = function(func) {
     '.splice'
   ];
 
-  forbidden.forEach(function(method) {
+  var openers = [' ','\n','\t','{','[','('];
+
+  globals.forEach(function(global) {
+    openers.forEach(function(opener) {
+      expect(func + '').to.not.contain(opener + global, 'No Cheating!');
+    });
+  });
+
+  methods.forEach(function(method) {
     expect(func + '').to.not.contain(method, 'No Cheating!');
   });
 };
@@ -36,6 +48,7 @@ describe('01 The Math Object', function() {
     expect(floor(1.5)).to.equal(1);
     expect(floor(-3.5)).to.equal(-4);
     expect(floor(100)).to.equal(100);
+    expect(floor(-987)).to.equal(-987);
     expect(floor(0)).to.equal(0);
     expect(floor(-10003948302034.324)).to.equal(-10003948302035);
 
@@ -47,6 +60,7 @@ describe('01 The Math Object', function() {
     expect(ceiling(1.5)).to.equal(2);
     expect(ceiling(-3.5)).to.equal(-3);
     expect(ceiling(100)).to.equal(100);
+    expect(ceiling(-987)).to.equal(-987);
     expect(ceiling(0)).to.equal(0);
     expect(ceiling(-10003948302034.324)).to.equal(-10003948302034);
 
@@ -177,6 +191,15 @@ describe('02 The Array Prototype', function() {
     expect(reverse([1, 2, 3])).to.deep.equal([3, 2, 1]);
     expect(reverse([])).to.deep.equal([]);
 
+  });
+
+  it('concat should combine any number of arrays', function() {
+
+    dontCheatOn(concat);
+    expect(concat(array, [1, 2, 3])).to.deep.equal([-1, true, 'abc', 0.5, 1, 2, 3]);
+    expect(concat(array, 1, [], ['a', 'b'], 'cd')).to.deep.equal([-1, true, 'abc', 0.5, 1, 'a', 'b', 'cd']);
+    expect(array).to.deep.equal([-1, true, 'abc', 0.5]);
+    expect(concat([], [])).to.deep.equal([]);
 
   });
 
@@ -241,15 +264,15 @@ describe('04 Extra Credit', function() {
     var array = [-1, true, 'abc', 0.5];
 
     dontCheatOn(splice);
-    expect(splice(array, 1)).to.deep.equal([-1]);
-    expect(array).to.deep.equal([true, 'abc', 0.5]);
-    expect(splice(array, 1, 1)).to.deep.equal(['abc']);
-    expect(array).to.deep.equal([true, 0.5]);
-    expect(splice(array, 1, 0, 'abc')).to.deep.equal([]);
-    expect(array).to.deep.equal([true, 'abc', 0.5]);
-    expect(splice(array, -1, 1, 'def', 'ghi')).to.deep.equal([0.5]);
-    expect(array).to.deep.equal([true, 'abc', 'def', 'ghi']);
-    expect(splice(array, 0)).to.deep.equal([true, 'abc', 'def', 'ghi']);
+    expect(splice(array, 3)).to.deep.equal([0.5]);
+    expect(array).to.deep.equal([-1, true, 'abc']);
+    expect(splice(array, 1, 1)).to.deep.equal([true]);
+    expect(array).to.deep.equal([-1, 'abc']);
+    expect(splice(array, 1, 0, 1)).to.deep.equal([]);
+    expect(array).to.deep.equal([-1, 1, 'abc']);
+    expect(splice(array, -1, 1, 'def', 'ghi')).to.deep.equal(['abc']);
+    expect(array).to.deep.equal([-1, 1, 'def', 'ghi']);
+    expect(splice(array, 0)).to.deep.equal([-1, 1, 'def', 'ghi']);
     expect(array).to.deep.equal([]);
 
   });

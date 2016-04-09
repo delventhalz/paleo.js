@@ -8,7 +8,7 @@
 
 // `Array.prototype.splice` allows you to modify an existing array by
 // removing a piece of an array and inserting any number of new elements.
-var splice = function(array, start, end) {
+var splice = function(array, start, count) {
 
 };
 

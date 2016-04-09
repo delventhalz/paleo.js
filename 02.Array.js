@@ -22,8 +22,8 @@ var pop = function(array) {
 
 
 // `Array.prototype.push` is just the opposite of `pop`, adding a new
-// element to the end of an array, and returning the new length.
-var push = function(array, element) {
+// value to the end of an array, and returning the new length.
+var push = function(array, value) {
 
 };
 
@@ -35,8 +35,8 @@ var shift = function(array) {
 };
 
 
-// `Array.prototype.unshift` adds an element to the start of an array.
-var unshift = function(array, element) {
+// `Array.prototype.unshift` adds an value to the start of an array.
+var unshift = function(array, value) {
 
 };
 
@@ -68,7 +68,7 @@ var reverse = function(array) {
 
 // `Array.prototype.concat` will combine any number of sub-arrays into a 
 // new larger array. You may find some of your previous functions useful 
-// here too. Note that concat does not modify any of the original arrays!
+// here too. Note that concat does not mutate any of the original arrays!
 var concat = function() {
 
 };
