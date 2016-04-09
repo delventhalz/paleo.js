@@ -41,7 +41,7 @@ describe('01 The Math Object', function() {
 
   });
 
-  it('ceiling should round numbers up', function() {
+  it('ceiling should round numbers up', function(done) {
 
     dontCheatOn(ceiling);
     expect(ceiling(1.5)).to.equal(2);
@@ -49,6 +49,7 @@ describe('01 The Math Object', function() {
     expect(ceiling(100)).to.equal(100);
     expect(ceiling(0)).to.equal(0);
     expect(ceiling(-10003948302034.324)).to.equal(-10003948302034);
+    done();
 
   });
 
@@ -238,20 +239,47 @@ describe('03 The String Prototype', function() {
 describe('04 Extra Credit', function() {
 
   it('splice should remove a piece of an array, and insert any number of new arguments', function() {
+    var array = [-1, true, 'abc', 0.5];
 
     dontCheatOn(splice);
+    expect(splice(array, 1)).to.deep.equal([-1]);
+    expect(array).to.deep.equal([true, 'abc', 0.5]);
+    expect(splice(array, 1, 1)).to.deep.equal(['abc']);
+    expect(array).to.deep.equal([true, 0.5]);
+    expect(splice(array, 1, 0, 'abc')).to.deep.equal([]);
+    expect(array).to.deep.equal([true, 'abc', 0.5]);
+    expect(splice(array, -1, 1, 'def', 'ghi')).to.deep.equal([0.5]);
+    expect(array).to.deep.equal([true, 'abc', 'def', 'ghi']);
+    expect(splice(array, 0)).to.deep.equal([true, 'abc', 'def', 'ghi']);
+    expect(array).to.deep.equal([]);
 
   });
 
   it('parse should take a date string and return the milliseconds since January 1, 1970', function() {
+    var fudge = 10800000;
 
     dontCheatOn(parse);
+    expect(parse('23 Jun 1912')).to.be.closeTo(-1815332400000, fudge);
+    expect(parse('1969-07-21T02:56:00Z')).to.be.closeTo(-14159040000, fudge);
+    expect(parse('1984')).to.be.closeTo(441763200000, fudge);
+    expect(parse('December 12, 1990')).to.be.closeTo(660981600000, fudge);
+    expect(parse('14 Jul 2015 11:49 +00:00')).to.be.closeTo(1436874540000, fudge);
+    expect(parse('2015-12-15')).to.be.closeTo(1450137600000, fudge);
+    expect(parse('2016-03-31T01:27:00+06:00')).to.be.closeTo(1459366020000, fudge);
+    expect(parse('Feb 31, 2099')).to.be.NaN;
 
   });
 
   it('sqrt should find the square root of a number', function() {
+    var fudge = 0.0001;
 
     dontCheatOn(sqrt);
+    expect(sqrt(4)).to.be.closeTo(2, fudge);
+    expect(sqrt(100)).to.be.closeTo(10, fudge);
+    expect(sqrt(2)).to.be.closeTo(1.414213, fudge);
+    expect(sqrt(17921)).to.be.closeTo(133.869339, fudge);
+    expect(sqrt(0)).to.be.closeTo(0, fudge);
+    expect(sqrt(-1)).to.be.NaN;
 
   });
 
