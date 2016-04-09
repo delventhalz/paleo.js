@@ -12,7 +12,7 @@
 // whole number. To get you in the swing of things, this first one is
 // implemented for you.
 var floor = function(number) {
-  return number - number % 1;
+  return number < 0 ? number - (1 + number % 1) : number - number % 1;
 };
 
 
