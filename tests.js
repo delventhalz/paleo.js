@@ -26,6 +26,8 @@ var dontCheatOn = function(func) {
   });
 };
 
+
+
 describe('01 The Math Object', function() {
 
   it('floor should round numbers down', function() {
@@ -101,22 +103,156 @@ describe('01 The Math Object', function() {
 });
 
 
+
 describe('02 The Array Prototype', function() {
+  var array;
+
+  beforeEach(function() {
+    array = [-1, true, 'abc', 0.5];
+  });
+
+  it('pop should remove and return the last item in an array', function() {
+
+    dontCheatOn(pop);
+    expect(pop(array)).to.equal(0.5);
+    expect(pop(array)).to.equal('abc');
+    expect(array.length).to.equal(2);
+    expect(pop(array)).to.equal(true);
+    expect(pop(array)).to.equal(-1);
+    expect(pop(array)).to.equal(undefined);
+    expect(array.length).to.equal(0);
+
+  });
+
+  it('push should add an item to end of an array and return the length', function() {
+
+    dontCheatOn(push);
+    expect(push(array, 7)).to.equal(5);
+    expect(array[4]).to.equal(7);
+    expect(array.length).to.equal(5);
+    expect(push(array, 'banana')).to.equal(6);
+    expect(array[5]).to.equal('banana');
+    expect(array.length).to.equal(6);
+
+  });
+
+  it('shift should remove and return the first item in an array', function() {
+
+    dontCheatOn(shift);
+    expect(shift(array)).to.equal(-1);
+    expect(shift(array)).to.equal(true);
+    expect(array.length).to.equal(2);
+    expect(shift(array)).to.equal('abc');
+    expect(shift(array)).to.equal(0.5);
+    expect(shift(array)).to.equal(undefined);
+    expect(array.length).to.equal(0);
+
+  });
+
+  it('unshift should add a new item to the beginning of an array', function() {
+
+    dontCheatOn(unshift);
+    expect(unshift(array, 'kumqwat')).to.equal(5);
+    expect(array[0]).to.equal('kumqwat');
+    expect(array.length).to.equal(5);
+    expect(unshift(array, 42)).to.equal(6);
+    expect(array[0]).to.equal(42);
+    expect(array.length).to.equal(6);
+
+  });
+
+  it('join should merge an array into a string', function() {
+
+    dontCheatOn(join);
+    expect(join(array, ' ')).to.equal('-1 true abc 0.5');
+    expect(join(array)).to.equal('-1,true,abc,0.5');
+    expect(join(array, 'banana')).to.equal('-1bananatruebananaabcbanana0.5');
+
+  });
+
+  it('reverse should reverse an array', function() {
+
+    dontCheatOn(reverse);
+    expect(reverse(array)).to.deep.equal([0.5, 'abc', true, -1]);
+    expect(reverse([1, 2, 3])).to.deep.equal([3, 2, 1]);
+    expect(reverse([])).to.deep.equal([]);
 
 
+  });
 
 });
+
 
 
 describe('03 The String Prototype', function() {
 
+  it('slice should return either a substring or subarray', function() {
 
+    dontCheatOn(slice);
+    expect(slice('xxhixx', 2, 4)).to.equal('hi');
+    expect(slice('preslice', 3)).to.equal('slice');
+    expect(slice([1,2,3], 1, 17)).to.deep.equal([2, 3]);
+    expect(slice(['a','b','c'], -1)).to.deep.equal(['c']);
+    expect(slice('gonna slice it', -8, -3)).to.equal('slice');
+    expect(slice(['no','slice'])).to.deep.equal(['no','slice']);
+    expect(slice('empty', 4, 2)).to.equal('');
+    expect(slice(['also','empty'], 17)).to.deep.equal([]);
+
+  });
+
+  it('split should turn a string into an array based on a delimiter', function() {
+
+    dontCheatOn(split);
+    expect(split('hello world', ' ')).to.deep.equal(['hello','world']);
+    expect(split('abc', '')).to.deep.equal(['a','b','c']);
+    expect(split('one element')).to.deep.equal(['one element']);
+    expect(split('1123212331234', '123')).to.deep.equal(['1','2','3','4']);
+
+  });
+
+  it('trim should remove white space to either side of a string', function() {
+
+    dontCheatOn(trim);
+    expect(trim('hi  ')).to.equal('hi');
+    expect(trim('   trimmed   ')).to.equal('trimmed');
+    expect(trim('\t white space\n\v ')).to.equal('white space');
+    expect(trim(' \r \f a b c')).to.equal('a b c');
+
+  });
+
+  it('replace should remove a piece of a string and replace it', function() {
+
+    dontCheatOn(replace);
+    expect(replace('abc', 'b', '')).to.equal('ac');
+    expect(replace('hello world', 'hello', 'hi')).to.equal('hi world');
+    expect(replace('prepend', '', 'this')).to.equal('thisprepend');
+    expect(replace('quirk', 'u')).to.equal('qundefinedirk');
+    expect(replace('abababa', 'b', 'c')).to.equal('acababa');
+
+  });
 
 });
 
 
+
 describe('04 Extra Credit', function() {
 
+  it('splice should remove a piece of an array, and insert any number of new arguments', function() {
 
+    dontCheatOn(splice);
+
+  });
+
+  it('parse should take a date string and return the milliseconds since January 1, 1970', function() {
+
+    dontCheatOn(parse);
+
+  });
+
+  it('sqrt should find the square root of a number', function() {
+
+    dontCheatOn(sqrt);
+
+  });
 
 });

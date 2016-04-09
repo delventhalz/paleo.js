@@ -16,7 +16,7 @@
 // returns it. Since this is your first one, I'll give it to you.
 var pop = function(array) {
   var popped = array[array.length - 1];
-  array.length--;
+  if (array.length) array.length--;
   return popped;
 };
 
@@ -54,7 +54,7 @@ var join = function(array, delim) {
 var reverse = function(array) {
   var reversed = [];
 
-  for (var i = array.length; i >= 0; i--) {
+  for (var i = array.length - 1; i >= 0; i--) {
     push(reversed, array[i]);
   }
 

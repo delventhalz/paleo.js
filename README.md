@@ -1,1 +1,1 @@
-# manual.js
+# caveman.js
