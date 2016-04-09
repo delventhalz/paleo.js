@@ -41,7 +41,7 @@ describe('01 The Math Object', function() {
 
   });
 
-  it('ceiling should round numbers up', function(done) {
+  it('ceiling should round numbers up', function() {
 
     dontCheatOn(ceiling);
     expect(ceiling(1.5)).to.equal(2);
@@ -49,7 +49,6 @@ describe('01 The Math Object', function() {
     expect(ceiling(100)).to.equal(100);
     expect(ceiling(0)).to.equal(0);
     expect(ceiling(-10003948302034.324)).to.equal(-10003948302034);
-    done();
 
   });
 
