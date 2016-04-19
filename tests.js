@@ -1,16 +1,13 @@
 var expect = chai.expect;
 
 var dontCheatOn = function(func) {
-  var globals = [
-    'Math',
-    'Array',
-    'String',
-    'Object',
-    'Date',
-    'Number'
-  ];
-
-  var methods = [
+  var forbidden = [
+    'Math.',
+    'Array.',
+    'String.',
+    'Object.',
+    'Date.',
+    'Number.',
     '.pop',
     '.push',
     '.shift',
@@ -22,18 +19,13 @@ var dontCheatOn = function(func) {
     '.split',
     '.trim',
     '.replace',
-    '.splice'
+    '.splice',
+    '.substring',
+    '.substr',
+    '.indexOf'
   ];
 
-  var openers = [' ','\n','\t','{','[','('];
-
-  globals.forEach(function(global) {
-    openers.forEach(function(opener) {
-      expect(func + '').to.not.contain(opener + global, 'No Cheating!');
-    });
-  });
-
-  methods.forEach(function(method) {
+  forbidden.forEach(function(method) {
     expect(func + '').to.not.contain(method, 'No Cheating!');
   });
 };
