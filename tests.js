@@ -26,7 +26,7 @@ var dontCheatOn = function(func) {
   ];
 
   forbidden.forEach(function(method) {
-    expect(func + '').to.not.contain(method, 'No Cheating!');
+    expect(func + '').to.not.contain(method, 'No native functions! Cheater!');
   });
 };
 
