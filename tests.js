@@ -226,16 +226,6 @@ describe('03 The String Prototype', function() {
 
   });
 
-  it('split should turn a string into an array based on a delimiter', function() {
-
-    dontCheatOn(split);
-    expect(split('hello world', ' ')).to.deep.equal(['hello','world']);
-    expect(split('abc', '')).to.deep.equal(['a','b','c']);
-    expect(split('one element')).to.deep.equal(['one element']);
-    expect(split('1123212331234', '123')).to.deep.equal(['1','2','3','4']);
-
-  });
-
   it('trim should remove white space to either side of a string', function() {
 
     dontCheatOn(trim);
@@ -254,6 +244,17 @@ describe('03 The String Prototype', function() {
     expect(replace('prepend', '', 'this')).to.equal('thisprepend');
     expect(replace('quirk', 'u')).to.equal('qundefinedirk');
     expect(replace('abababa', 'b', 'c')).to.equal('acababa');
+
+  });
+
+  it('split should turn a string into an array based on a delimiter', function() {
+
+    dontCheatOn(split);
+    expect(split('hello world', ' ')).to.deep.equal(['hello','world']);
+    expect(split('abc', '')).to.deep.equal(['a','b','c']);
+    expect(split('one element')).to.deep.equal(['one element']);
+    expect(split('1123212331234', '123')).to.deep.equal(['1','2','3','4']);
+    expect(split('truefalsetrue', 'true')).to.deep.equal(['false']);
 
   });
 
@@ -295,14 +296,16 @@ describe('04 Extra Credit', function() {
   });
 
   it('sqrt should find the square root of a number', function() {
-    var fudge = 0.0001;
 
     dontCheatOn(sqrt);
-    expect(sqrt(4)).to.be.closeTo(2, fudge);
-    expect(sqrt(100)).to.be.closeTo(10, fudge);
-    expect(sqrt(2)).to.be.closeTo(1.414213, fudge);
-    expect(sqrt(17921)).to.be.closeTo(133.869339, fudge);
-    expect(sqrt(0)).to.be.closeTo(0, fudge);
+    expect(sqrt(1)).to.equal(1);
+    expect(sqrt(4)).to.equal(2);
+    expect(sqrt(10000)).to.equal(100);
+    expect(sqrt(0.25)).to.equal(0.5);
+    expect(sqrt(2)).to.be.closeTo(1.4142135623730951, 0.0000000000000005);
+    expect(sqrt(0.271828)).to.be.closeTo(0.5213712688670138, 0.0000000000000005);
+    expect(sqrt(3141592)).to.be.closeTo(1772.4536665312298, 0.0000000000005);
+    expect(sqrt(0)).to.equal(0);
     expect(sqrt(-1)).to.be.NaN;
 
   });
