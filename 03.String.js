@@ -22,17 +22,17 @@ var trim = function(string) {
 };
 
 
-/**  String.prototype.split  **/
-// The opposite of `join`, returns an array by breaking up a string 
-// using a delimiter. The delimiter is not included in the array.
-var split = function(string, delim) {
-
-};
-
-
 /**  String.prototype.replace  **/
 // Searches for a target sub-string and replaces it. 
 // Note that only the first instance is replaced.
 var replace = function(string, target, replacement) {
+
+};
+
+
+/**  String.prototype.split  **/
+// The opposite of `join`, returns an array by breaking up a string 
+// using a separator. The separators are not included in the array.
+var split = function(string, separator) {
 
 };

@@ -49,9 +49,9 @@ var unshift = function(array, value) {
 
 
 /**  Array.prototype.join  **/
-// Combines an array of sub-strings with an optional delimiter string 
-// inbetween each. The delimiter should default to a comma.
-var join = function(array, delim) {
+// Combines an array of sub-strings with an optional separator string 
+// inbetween each. The separator should default to a comma.
+var join = function(array, separator) {
 
 };
 
