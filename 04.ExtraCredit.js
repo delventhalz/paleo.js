@@ -14,16 +14,16 @@ var splice = function(array, start, count) {
 };
 
 
-/**  Date.parse  **/
-// An interesting function which takes a date string in a variety of formats
-// and returns the number of milliseconds since January 1, 1970.
-var parse = function(date) {
+/**  Math.sqrt  **/
+// How *do* you find the square root of a number if you don't have `Math`?
+var sqrt = function(number) {
 
 };
 
 
-/**  Math.sqrt  **/
-// Good luck.
-var sqrt = function(number) {
+/**  Date.parse  **/
+// An interesting function which takes a date string in a variety of formats
+// and returns the number of milliseconds since January 1, 1970.
+var parse = function(date) {
 
 };

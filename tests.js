@@ -281,20 +281,6 @@ describe('04 Extra Credit', function() {
 
   });
 
-  it('parse should take a date string and return the milliseconds since January 1, 1970', function() {
-
-    dontCheatOn(parse);
-    expect(parse('23 Jun 1912')).to.equal(-1815332400000);
-    expect(parse('1969-07-21T02:56:00Z')).to.equal(-14159040000);
-    expect(parse('1984')).to.equal(441763200000);
-    expect(parse('December 12, 1990')).to.equal(660981600000);
-    expect(parse('14 Jul 2015 11:49 +00:00')).to.be.equal(1436874540000);
-    expect(parse('2015-12-15')).to.equal(1450137600000);
-    expect(parse('2016-03-31T01:27:00+06:00')).to.be.equal(1459366020000);
-    expect(parse('Feb 31, 2099')).to.be.NaN;
-
-  });
-
   it('sqrt should find the square root of a number', function() {
 
     dontCheatOn(sqrt);
@@ -307,6 +293,20 @@ describe('04 Extra Credit', function() {
     expect(sqrt(3141592)).to.be.closeTo(1772.4536665312298, 0.0000000000005);
     expect(sqrt(0)).to.equal(0);
     expect(sqrt(-1)).to.be.NaN;
+
+  });
+
+  it('parse should take a date string and return the milliseconds since January 1, 1970', function() {
+
+    dontCheatOn(parse);
+    expect(parse('23 Jun 1912')).to.equal(-1815332400000);
+    expect(parse('1969-07-21T02:56:00Z')).to.equal(-14159040000);
+    expect(parse('1984')).to.equal(441763200000);
+    expect(parse('December 12, 1990')).to.equal(660981600000);
+    expect(parse('14 Jul 2015 11:49 +00:00')).to.be.equal(1436874540000);
+    expect(parse('2015-12-15')).to.equal(1450137600000);
+    expect(parse('2016-03-31T01:27:00+06:00')).to.be.equal(1459366020000);
+    expect(parse('Feb 31, 2099')).to.be.NaN;
 
   });
 
