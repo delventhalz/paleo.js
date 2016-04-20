@@ -5,6 +5,15 @@
 // Primitive values can get in on the method madness too! 
 
 
+/**  Object.keys  **/
+// A little warmup before we get to the actual `String.prototype`, this 
+// function takes an object and returns an array of it's key names. Note 
+// it's not on the prototype! In the wild you'd write: `Object.keys(obj)`.
+var keys = function(object) {
+
+};
+
+
 /**  String.prototype.slice  **/
 // This useful method copies a piece of a string from a start index 
 // (inclusive) and an end index (non-inclusive). `Array.prototype` 
@@ -26,13 +35,5 @@ var trim = function(string) {
 // Searches for a target sub-string and replaces it. 
 // Note that only the first instance is replaced.
 var replace = function(string, target, replacement) {
-
-};
-
-
-/**  String.prototype.split  **/
-// The opposite of `join`, returns an array by breaking up a string 
-// using a separator. The separators are not included in the array.
-var split = function(string, separator) {
 
 };

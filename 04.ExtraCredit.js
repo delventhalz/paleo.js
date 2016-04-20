@@ -14,6 +14,14 @@ var splice = function(array, start, count) {
 };
 
 
+/**  String.prototype.split  **/
+// The opposite of `join`, returns an array by breaking up a string 
+// using a separator. The separators are not included in the array.
+var split = function(string, separator) {
+
+};
+
+
 /**  Math.sqrt  **/
 // How *do* you find the square root of a number if you don't have `Math`?
 var sqrt = function(number) {
@@ -22,7 +30,7 @@ var sqrt = function(number) {
 
 
 /**  Date.parse  **/
-// An interesting function which takes a date string in a variety of formats
+// A little function that takes a date string in a variety of formats
 // and returns the number of milliseconds since January 1, 1970.
 var parse = function(date) {
 

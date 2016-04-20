@@ -4,10 +4,10 @@ Back in my day, we didn't code with all these fancy abstracted JavaScript method
 
 This is nonsense of course. Methods like `split` and `concat` are profoundly useful and any decent engineer should know and use them. But have you ever wondered what's going on under the hood? What if you needed to micromanage performance and had to implement one or two of these manually? Or maybe you are a new JS developer, and you just need a little practice.
 
-Caveman JS is a library of incomplete stub functions and accompanying tests. The focus is on useful native JS methods that you should probably know a little more about, and can implement with basic syntax. There are no callback functions or recursion here. Everything can be solved with basic loops, conditionals, operators, and occasionally the `arguments` object. If you need to practice your JavaScript foundations, this is the repo for you.
+Caveman JS is a library of incomplete stub functions and accompanying tests. The focus is on useful native JS methods that you should probably know a little more about, and can implement with basic syntax. You won't need callback functions, recursion, or even the `this` keyword. Everything can be solved with basic loops, conditionals, operators, and occasionally the `arguments` object. If you need to practice your JavaScript fundamentals, this is the repo for you.
 
 ##How To Use This Repo
-Use GitHub's "Download ZIP" feature to download a copy of Caveman JS. Once downloaded, use your text editor of choice to fill out the code in the four numbered files. Each covers a different group of useful native functions. Your job is to make each function work identically to its native equivalent, and to do so without utilizing any functions you haven't written yourself.
+Use GitHub's "Download ZIP" feature to download a copy of Caveman JS. Once downloaded, use your text editor of choice to fill out the code in the four numbered files. Each covers a different group of useful native functions. Your job is to make each function work identically to its native equivalent, and to do so without using any functions you haven't written yourself. **No native functions allowed!**
 
 To assist you, there is a suite of Mocha/Chai tests that you can run by opening `TestRunner.html` in any browser. This will track your progress, showing you which functions are failing and which tests are the problem. But beware relying too much on tests! There may be cases they miss, and you really should know whether your code is working or not without them.
 
