@@ -3,7 +3,7 @@
  * * * * * * * * * * * * * * * * * * * * * */
 
 // Part of what makes arrays so powerful are the many useful methods
-// attached to the `Array.prototype`. It makes it easy to take a set of
+// attached to the `Array.prototype`. They make it easy to take a set of
 // data and `sort` or `filter` it. Of course, as cavemen we are throwing
 // all those functions out the window and implementing them from scratch.
 
@@ -12,46 +12,54 @@
 // have to input the array as the first argument.
 
 
-// `Array.prototype.pop` removes the last element from an array and 
-// returns it. Since this is your first one, I'll give it to you.
+/**  Array.prototype.pop()  **/
+// This removes the last element from an array and returns it. 
+// Since it's your first one, I'll do it for you.
 var pop = function(array) {
   var popped = array[array.length - 1];
-  if (array.length) array.length--;
+
+  if (array.length > 0) {
+    array.length--;
+  }
+
   return popped;
 };
 
 
-// `Array.prototype.push` is just the opposite of `pop`, adding a new
-// value to the end of an array, and returning the new length.
+/**  Array.prototype.push  **/
+// Just the opposite of `pop`, this adds a new value to the end 
+// of an array, and returns the new length.
 var push = function(array, value) {
 
 };
 
 
-// `Array.prototype.shift` removes the first element from an array.
-// This won't be quite as simple as `pop` was.
+/**  Array.prototype.shift  **/
+// Removes the first element from an array. Won't be as simple as `pop`.
 var shift = function(array) {
 
 };
 
 
-// `Array.prototype.unshift` adds an value to the start of an array.
+/**  Array.prototype.unshift  **/
+// You may sense a pattern. This adds an value to the start of an array.
 var unshift = function(array, value) {
 
 };
 
 
-// `Array.prototype.join` combines an array of substrings into a single 
-// string with an optional delimiter string in between each one. If no 
-// delimiter is provided, it should use a comma.
+/**  Array.prototype.join  **/
+// Combines an array of sub-strings with an optional delimiter string 
+// inbetween each. The delimiter should default to a comma.
 var join = function(array, delim) {
 
 };
 
 
-// `Array.prototype.reverse`, as you might expect, takes an array and 
-// flips it. It's always good to reuse useful code, so I've solved 
-// `reverse` using your version of `push`. You got that working, right?
+/**  Array.prototype.reverse  **/
+// Reverses an array in place as well as returning the mutated array. 
+// Now, it's always good to reuse useful code, so I've solved `reverse`
+// using your `push`. . .  you got that working, right?
 var reverse = function(array) {
   var reversed = [];
 
@@ -67,9 +75,9 @@ var reverse = function(array) {
 };
 
 
-// `Array.prototype.concat` will combine any number of sub-arrays into a 
-// new larger array. You may find some of your previous functions useful 
-// here too. Note that concat does not mutate any of the original arrays!
+/**  Array.prototype.concat  **/
+// This combines any number of sub-arrays into a new larger array. 
+// You may find some of your previous functions useful here too!
 var concat = function() {
 
 };
