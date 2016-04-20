@@ -1,13 +1,16 @@
 var expect = chai.expect;
 
 var dontCheatOn = function(func) {
-  var forbidden = [
+  var globals = [
     'Math.',
     'Array.',
     'String.',
     'Object.',
     'Date.',
-    'Number.',
+    'Number.'
+  ];
+
+  var methods = [
     '.pop',
     '.push',
     '.shift',
@@ -25,7 +28,15 @@ var dontCheatOn = function(func) {
     '.indexOf'
   ];
 
-  forbidden.forEach(function(method) {
+  var openers = [' ','\n','\t','{','[','('];
+
+  globals.forEach(function(global) {
+    openers.forEach(function(opener) {
+      expect(func + '').to.not.contain(opener + global, 'No native functions! Cheater!');
+    });
+  });
+
+  methods.forEach(function(method) {
     expect(func + '').to.not.contain(method, 'No native functions! Cheater!');
   });
 };
