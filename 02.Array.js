@@ -58,8 +58,8 @@ var join = function(array, separator) {
 
 /**  Array.prototype.reverse  **/
 // Reverses an array in place as well as returning the mutated array. 
-// Now, it's always good to reuse useful code, so I've solved `reverse`
-// using your `push`. . .  you got that working, right?
+// To demonstrate reusing your functions, I've solved `reverse` in a
+// bit of a odd way using your `push`... you got that working, right?
 var reverse = function(array) {
   var reversed = [];
 
@@ -77,7 +77,7 @@ var reverse = function(array) {
 
 /**  Array.prototype.concat  **/
 // This combines any number of sub-arrays into a new larger array. 
-// You may find some of your previous functions useful here too!
+// You may find previous functions useful here too!
 var concat = function() {
 
 };
