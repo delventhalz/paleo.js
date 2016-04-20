@@ -1,5 +1,5 @@
 /* * * * * * * * * * * * * * * * * * * * * *
- *   CAVEMAN JS PT 3: STRING.PROTOTYPE     *
+ *    PALEO JS PT 3: STRING.PROTOTYPE      *
  * * * * * * * * * * * * * * * * * * * * * */
 
 // Primitive values can get in on the method madness too! 

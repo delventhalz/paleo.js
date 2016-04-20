@@ -1,5 +1,5 @@
 /* * * * * * * * * * * * * * * * * * * * * *
- *     CAVEMAN JS PT 4: EXTRA CREDIT       *
+ *      PALEO JS PT 4: EXTRA CREDIT        *
  * * * * * * * * * * * * * * * * * * * * * */
 
 // Looking for more useful JavaScript tools to implement? These are  

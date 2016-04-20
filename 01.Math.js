@@ -1,10 +1,10 @@
 /* * * * * * * * * * * * * * * * * * * * * *
- *    CAVEMAN JS PT 1: THE MATH OBJECT     *
+ *     PALEO JS PT 1: THE MATH OBJECT      *
  * * * * * * * * * * * * * * * * * * * * * */
 
 // The Math object has all sorts of useful methods that JavaScript
 // programmers use every day, like `Math.sqrt` (square root) or 
-// `Math.random` (generates random number). But we're caveman coders
+// `Math.random` (generates random number). But we're going paleo
 // so we're going to go without, and implement these methods manually.
 
 

@@ -1,5 +1,5 @@
 /* * * * * * * * * * * * * * * * * * * * * *
- *    CAVEMAN JS PT 2: ARRAY.PROTOTYPE     *
+ *     PALEO JS PT 2: ARRAY.PROTOTYPE      *
  * * * * * * * * * * * * * * * * * * * * * */
 
 // Part of what makes arrays so powerful are the many useful methods
