@@ -17,10 +17,9 @@ var floor = function(number) {
 };
 
 
-/**  Math.ceiling  **/
-// This one rounds up. Your solution may differ from mine. 
-// Just make sure it works.
-var ceiling = function(number) {
+/**  Math.ceil  **/
+// Rounds up. Your solution may differ from mine. Just make sure it works.
+var ceil = function(number) {
 
 };
 
