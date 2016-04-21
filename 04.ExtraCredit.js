@@ -30,8 +30,10 @@ var sqrt = function(number) {
 
 
 /**  Date.parse  **/
-// A little function that takes a date string in a variety of formats
-// and returns the number of milliseconds since January 1, 1970.
+// A little function that takes a date string in a variety of formats and 
+// returns the number of milliseconds since midnight UTC January 1, 1970.
+// Note that while the native version sometimes defaults to your local 
+// time zone, the paleo version is expected to always default to UTC.
 var parse = function(date) {
 
 };
