@@ -12,8 +12,12 @@
 // Our first function rounds a number down to the next whole number. 
 // To get you in the swing of things, I implemented it for you.
 var floor = function(number) {
-  var r = number % 1;
-  return number < 0 ? number - (!r ? 0 : 1 + r) : number - r;
+  var remainder = number % 1;
+  if (remainder) {
+    return number > 0 ? number - remainder : number - remainder - 1;
+  }
+  else return number;
+  // return number < 0 ? number - (!remainder ? 0 : 1 + remainder) : number - r;
 };
 
 
@@ -27,7 +31,7 @@ var ceil = function(number) {
 /**  Math.abs  **/
 // This one simply returns the absolute value of a number.
 var abs = function(number) {
-
+    return number < 0 ? -number : number;
 };
 
 
