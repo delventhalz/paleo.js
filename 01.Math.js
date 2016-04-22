@@ -8,24 +8,6 @@
 // so we're going to go without, and implement these methods manually.
 
 
-/**  Math.floor  **/
-// Our first function rounds a number down to the next whole number. 
-// To get you in the swing of things, I implemented it for you.
-var floor = function(number) {
-  var remainder = number % 1;
-  if (remainder) {
-    return number > 0 ? number - remainder : number - remainder - 1;
-  }
-  else return number;
-  // return number < 0 ? number - (!remainder ? 0 : 1 + remainder) : number - r;
-};
-
-
-/**  Math.ceil  **/
-// Rounds up. Your solution may differ from mine. Just make sure it works.
-var ceil = function(number) {
-
-};
 
 
 /**  Math.abs  **/
@@ -33,6 +15,14 @@ var ceil = function(number) {
 var abs = function(number) {
     return number < 0 ? -number : number;
 };
+
+/**  Math.floor  **/
+// Our first function rounds a number down to the next whole number. 
+// To get you in the swing of things, I implemented it for you.
+var floor = function(number) {
+    
+};
+
 
 
 /**  Math.pow  **/

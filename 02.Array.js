@@ -2,6 +2,8 @@
  *     PALEO JS PT 2: ARRAY.PROTOTYPE      *
  * * * * * * * * * * * * * * * * * * * * * */
 
+// Let's not reference prototype. Will confuse students.
+
 // Part of what makes arrays so powerful are the many useful methods
 // attached to the `Array.prototype`. They make it easy to take a set of
 // data and `sort` or `filter` it. Of course, as cavemen we are throwing
@@ -11,10 +13,15 @@
 // i.e. [1, 2, 3].pop(), but since we are doing this manually, we'll 
 // have to input the array as the first argument.
 
-
 /**  Array.prototype.pop()  **/
 // This removes the last element from an array and returns it. 
 // Since it's your first one, I'll do it for you.
+
+// Array Pop
+// var array = [1, 2, 3];
+// array.pop() returns 3
+// array // [1, 2];
+
 var pop = function(array) {
   var popped = array[array.length - 1];
 
@@ -29,6 +36,9 @@ var pop = function(array) {
 /**  Array.prototype.push  **/
 // Just the opposite of `pop`, this adds a new value to the end 
 // of an array, and returns the new length.
+
+// push doesn't return length
+// make push first function
 var push = function(array, value) {
 
 };
