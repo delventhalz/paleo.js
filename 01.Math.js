@@ -20,6 +20,10 @@ var abs = function(number) {
 /**  MATH.FLOOR  **/
 // This useful function takes a number and rounds it drops any decimal
 // values by rounding down to the nearest integer.
+
+// Example Usage:
+// Math.floor(3.5);  --> returns 3
+
 var floor = function(number) {
     
 };
@@ -27,23 +31,36 @@ var floor = function(number) {
 
 /**  MATH.POW  **/
 // JavaScript doesn't have an exponent operator, so you need `Math.pow`
-// to raise a number to a power. Too bad you can't use that.
+// to raise a number to a power. Too bad you can't use that. The good 
+// news is you don't have to handle fractional exponents, only integers.
+
+// Example Usage:
+// Math.pow(2, 4);  --> returns 16
+
 var pow = function(base, exponent) {
 
 };
 
 
 /**  MATH.MAX  **/
-// Normally this compares any number of numbers and returns the 
-// largest. Let's make a version that just compares two.
+// Normally this compares any number of numbers and returns the largest. 
+// Let's take it easy for now and make a version that just compares two.
+
+// Example Usage:
+// Math.max(17, 9);  --> returns 17
+
 var max = function(x, y) {
 
 };
 
 
 /**  MATH.MIN  **/
-// I bet you can guess what this one is suppossed to do. This time,
-// use the `arguments` keyword so that you can compare more than two.
+// I bet you can guess what this one is suppossed to do. This time, use 
+// the `arguments` keyword so that you can compare any number of inputs.
+
+// Example Usage:
+// Math.min(5, 7, 35, -7, 22);  --> returns -7
+
 var min = function() {
 
 };
