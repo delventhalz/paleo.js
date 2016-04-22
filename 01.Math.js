@@ -5,7 +5,7 @@
 // The Math object has all sorts of useful methods that JavaScript
 // programmers use every day, like `Math.sqrt` (square root) or 
 // `Math.random` (generates random number). But we're going paleo
-// so we're going to go without, and implement these methods manually.
+// so you'll have to do without, and instead implement them manually.
 
 
 
@@ -16,13 +16,13 @@ var abs = function(number) {
     return number < 0 ? -number : number;
 };
 
+
 /**  MATH.FLOOR  **/
 // This useful function takes a number and rounds it drops any decimal
 // values by rounding down to the nearest integer.
 var floor = function(number) {
     
 };
-
 
 
 /**  MATH.POW  **/

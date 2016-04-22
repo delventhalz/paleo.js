@@ -2,16 +2,17 @@
  *     PALEO JS PT 3: STRING METHODS       *
  * * * * * * * * * * * * * * * * * * * * * */
 
-// Primitive values get methods too! Like Array methods, you would
-// normally call these on the string, like `"abc".slice(1, 2)`.
+// Primitive values get methods too! Like the Array methods, these would
+// normally call these on the string, for example: `"abc".slice(1, 2)`.
+// For your paleo versions, the string will be the first argument.
 
 
 
 /**  OBJECT.KEYS  **/
-// But first, a little warmup before we get to the actual String methods.  
+// But first! A little warmup before we get to the actual String methods.  
 // This method takes an object and returns an array of it's key's names.
 // Note that this one doesn't get called directly on the object! In the 
-// wild you'd write: `Object.keys(obj)`, similar to the Math methods.
+// wild you would write: `Object.keys(obj)`, similar to the Math methods.
 var keys = function(object) {
 
 };
@@ -20,7 +21,7 @@ var keys = function(object) {
 /**  SLICE  **/
 // This useful method copies a piece of a string from a start index 
 // (inclusive) and an end index (non-inclusive). Arrays have a similar 
-// method, so make your version of `slice` to work for both.
+// method, so make your version of `slice` work for both.
 var slice = function(stringOrArray, start, end) {
 
 };
