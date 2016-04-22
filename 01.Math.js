@@ -8,27 +8,21 @@
 // so we're going to go without, and implement these methods manually.
 
 
-/**  Math.floor  **/
-// Our first function rounds a number down to the next whole number. 
-// To get you in the swing of things, I implemented it for you.
-var floor = function(number) {
-  var r = number % 1;
-  return number < 0 ? number - (!r ? 0 : 1 + r) : number - r;
-};
-
-
-/**  Math.ceil  **/
-// Rounds up. Your solution may differ from mine. Just make sure it works.
-var ceil = function(number) {
-
-};
 
 
 /**  Math.abs  **/
 // This one simply returns the absolute value of a number.
 var abs = function(number) {
-
+    return number < 0 ? -number : number;
 };
+
+/**  Math.floor  **/
+// Our first function rounds a number down to the next whole number. 
+// To get you in the swing of things, I implemented it for you.
+var floor = function(number) {
+    
+};
+
 
 
 /**  Math.pow  **/
