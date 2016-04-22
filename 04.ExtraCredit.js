@@ -6,7 +6,8 @@
 // harder than the ones that came before, but I know you can do it.
 
 
-/**  Array.prototype.splice  **/
+
+/**  [].SPLICE  **/
 // Modifies an array by removing a number of elements and 
 // inserting any number of new ones.
 var splice = function(array, start, count) {
@@ -14,7 +15,7 @@ var splice = function(array, start, count) {
 };
 
 
-/**  String.prototype.split  **/
+/**  "".SPLIT  **/
 // The opposite of `join`, returns an array by breaking up a string 
 // using a separator. The separators are not included in the array.
 var split = function(string, separator) {
@@ -22,14 +23,14 @@ var split = function(string, separator) {
 };
 
 
-/**  Math.sqrt  **/
+/**  MATH.SQRT  **/
 // How *do* you find the square root of a number if you don't have `Math`?
 var sqrt = function(number) {
 
 };
 
 
-/**  Date.parse  **/
+/**  DATE.PARSE  **/
 // A little function that takes a date string in a variety of formats and 
 // returns the number of milliseconds since midnight UTC January 1, 1970.
 // Note that while the native version sometimes defaults to your local 
