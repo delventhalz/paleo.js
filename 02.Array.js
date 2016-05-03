@@ -4,12 +4,9 @@
 
 // Part of what makes arrays so powerful are the many useful methods
 // attached to them. They make it easy to take a set of data and `sort` 
-// or `filter` it. Of course, as neanderthals we are throwing all those 
-// functions out the window.document and implementing them from scratch.
-
-// Note that normally these functions are called directly on an array,
-// i.e. `[1, 2, 3].pop()`, but since we are doing this manually, we'll 
-// have to input the array as the first argument.
+// or `filter` it. Note that normally these functions are called directly 
+// on an array, i.e. `[1, 2, 3].pop()`, but since we are doing this 
+// manually, we'll have to input the array as the first argument.
 
 
 
@@ -22,13 +19,13 @@
 // array.pop();    --> returns 8, and array now equals [6, 7]
 
 var pop = function(array) {
-  var popped = array[array.length - 1];
+  var last = array[array.length - 1];
 
   if (array.length > 0) {
     array.length--;
   }
 
-  return popped;
+  return last;
 };
 
 
@@ -66,7 +63,7 @@ var shift = function(array) {
 
 // Example Usage:
 // var array = [6, 7, 8];
-// array.unshift(5);    --> returns 4, and array now equals [5, 6, 7, 8]
+// array.unshift(3, 4, 5);    --> returns 6, and array now equals [3, 4, 5, 6, 7, 8]
 
 var unshift = function(array) {
 

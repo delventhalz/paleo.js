@@ -5,7 +5,7 @@
 // The Math object has all sorts of useful methods that JavaScript
 // programmers use every day, like `Math.sqrt` (square root) or 
 // `Math.random` (generates random number). But we're going paleo
-// so you'll have to do without, and instead implement them manually.
+// so you'll have to implement them manually.
 
 
 

@@ -2,7 +2,7 @@
  *      PALEO JS PT 4: EXTRA CREDIT        *
  * * * * * * * * * * * * * * * * * * * * * */
 
-// Looking for more useful JavaScript tools to implement? These are  
+// Looking for more useful JavaScript methods to implement? These are  
 // harder than the ones that came before, but I know you can do it.
 
 
@@ -12,8 +12,8 @@
 // inserting any number of new ones.
 
 // Example Usage:
-// var arr = [7, 8, 9];
-// arr.splice(2, 1, 14, 16);    --> returns [9] and arr now equals [7, 8, 14, 16]
+// var arr = [6, 7, 8, 9];
+// arr.splice(2, 1, 14, 16);  --> returns [8] and arr is now [6, 7, 14, 16, 9]
 
 var splice = function(array, start, count) {
 
@@ -47,7 +47,7 @@ var sqrt = function(number) {
 // A little function that takes a date string in a variety of formats and 
 // returns the number of milliseconds since midnight UTC January 1, 1970.
 // Note that while the native version sometimes defaults to your local 
-// time zone, the paleo version is expected to always default to UTC.
+// time zone, the paleo version is should always default to UTC.
 
 // Example Usage:
 // Date.parse("December 12, 1990");    --> returns 660960000000
